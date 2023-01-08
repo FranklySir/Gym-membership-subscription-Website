@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "V-Avtive:Home";
+}
+
+<h2>V-Active </h2>
+
+
+<h1> "Your Number One Fitness Destination"  </h1>
+
+
+<div id="content">
+    <table class="catalogue">
+        <tr>
+            <th>Exercise</th>
+            <th>Price per class</th>
+        </tr>
+        <tr>
+            <td>Yoga</td>
+            <td>R60</td>
+        </tr>
+        <tr>
+            <td>Swimming</td>
+            <td>R80</td>
+        </tr>
+        <tr>
+            <td>Cycling</td>
+            <td>R50</td>
+        </tr>
+        <tr>
+            <td>Dance</td>
+            <td>R150</td>
+        </tr>
+
+    </table>
+</div>
+<span>Note: the prices are charged per person </span>
+
+<div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+       <button type="submit" class="login">@Html.ActionLink("Login", "Login", "Member")</button>
+        <button type="submit" class="register">@Html.ActionLink("Register", "Register", "Member")</button>
+    </div>
+</div>
+

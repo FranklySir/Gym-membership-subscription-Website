@@ -1,0 +1,53 @@
+﻿@model IEnumerable<CapStone.Models.Class>
+
+@{
+    ViewBag.Title = "Classes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Classes</h2>
+
+<p>
+    @Html.ActionLink("Add a Class", "Create", "Class")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Class1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Venue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Class1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Venue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(model => item.Price)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id }) |
+            
+        </td>
+    </tr>
+}
+
+</table>
+<p>Note : All Prices are in  South African Rands</p>
